@@ -1,0 +1,17 @@
+*.jar
+*.class
+dist/*
+target/
+project/target
+*.pscala
+*~
+.classpath
+.project
+.cache
+.settings
+.ensime
+.worksheet
+.cache-*
+derby.log
+metastore_db
+bin
