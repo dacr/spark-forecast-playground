@@ -38,12 +38,15 @@ object Dummy {
     implicit val sqlc = new SQLContext(sc)
     implicit val hivec = new HiveContext(sc)
 
+
+    val pwd=new java.io.File(".").getAbsolutePath
+
     val series_raw = sqlc
       .read
       .format("com.databricks.spark.csv")
       .option("header", "true")
       .option("delimiter", ";")
-      .load("/Users/dcr/dev/spark-dummy-project/generated-file-1.csv")
+      .load(s"$pwd/generated-file-1.csv")
 
     import sqlc.implicits._
 
